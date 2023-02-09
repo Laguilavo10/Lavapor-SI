@@ -10,7 +10,7 @@ export function Menu() {
       <menu className="menu-container">
         <h4>MENU</h4>
         {linksNav.map((link) => (
-          <MenuLink svg={link.svg} key={link.title}>
+          <MenuLink svg={link.svg} key={link.title} to={link.to}>
             {link.title}
           </MenuLink>
         ))}

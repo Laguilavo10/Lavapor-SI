@@ -1,11 +1,12 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
-export function MenuLink({children, svg}) {
+export function MenuLink({children, svg, to}) {
   return (
     <>
       <li className="menu-link">
         {svg}
-        <a href="">{children}</a>
+        <NavLink to={to}>{children}</NavLink>
       </li>
     </>
   );
