@@ -37,6 +37,7 @@
   height: 35px;
   stroke: grey;
   cursor: pointer;
+  /* z-index: 100; */
 }
 .topbar-user > img {
   width: 35px;

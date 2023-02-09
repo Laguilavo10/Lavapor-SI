@@ -8,6 +8,7 @@
   height: 35px;
   border: none;
   padding: 5px;
+  border: 1px solid grey;
   border-radius: var(--border-radius);
   box-shadow: var(--shadow);
   display: flex;

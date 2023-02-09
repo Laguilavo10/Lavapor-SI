@@ -38,11 +38,12 @@
   font-size: 1.4rem;
   display: flex;
   justify-content: start;
+  gap: 5px;
 }
 
 
 .menu-link > svg{
-  width: 44px;
+  width: 35px;
   height: 35px;
   stroke: #FFFFFF;
   stroke-width: 1.5;

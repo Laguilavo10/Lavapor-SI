@@ -11,6 +11,7 @@ import "./styles/Menu.css"
 import "./styles/TopBar.css"
 import "./styles/Form.css"
 import "./styles/Busqueda.css"
+import "./styles/Modal.css"
 
 function App() {
   return (
@@ -63,6 +64,14 @@ function App() {
             element={
               <MainLayout>
                 <h1>gastos</h1>
+              </MainLayout>
+            }
+          />
+          <Route
+            path="*"
+            element={
+              <MainLayout>
+                <h1>Not Found</h1>
               </MainLayout>
             }
           />

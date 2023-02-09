@@ -1,0 +1,30 @@
+.modal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.247);
+}
+
+.modal > div{
+  background-color: var(--theme);
+  width: 200px;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  align-items: end;
+  gap: 5px;
+}
+
+.modal > div > a{
+  border-bottom: 1px solid grey;
+  width: min-content;
+  color: black;
+}
