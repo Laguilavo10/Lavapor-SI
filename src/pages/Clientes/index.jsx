@@ -1,8 +1,9 @@
 import React from "react"
-import { InputForm } from "../../components/InputForm"
+import { Busqueda } from "../../components/Busqueda"
+import { RegistroForm } from "../../components/RegistroForm"
 
 export function Clientes() {
-  let countInputs = [
+  const Inputs = [
     { name: "Cedula de ciudadanía" },
     { name: "Nombre" },
     { name: "Apellido" },
@@ -13,13 +14,8 @@ export function Clientes() {
 
   return (
     <>
-      <h1>Registro</h1>
-      <form className="form">
-        {countInputs.map((i) => (
-          <InputForm name={i.name} />
-        ))}
-        <button className="form-button">hola</button>
-      </form>
+      <RegistroForm countInputs={Inputs} />
+      <Busqueda />
     </>
   )
 }

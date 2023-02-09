@@ -10,6 +10,7 @@ import "./styles/MainLayout.css"
 import "./styles/Menu.css"
 import "./styles/TopBar.css"
 import "./styles/Form.css"
+import "./styles/Busqueda.css"
 
 function App() {
   return (
