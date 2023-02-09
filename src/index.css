@@ -8,18 +8,19 @@
 
 :root{
   --blue-dark:#18345E;
-  /* dartk theme */
-  --theme: #1c1c1e;
-  /* light theme */
+  --yellow-button:#F0AB20;
   --theme: #f9f7f8; 
-  --theme: #c7d5f3; 
+  -font-theme:#313135;
   --border-radius:6px;
   --shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  /* --shadow: 0px 4px 4px var(--font-theme); */
 }
 
 body{
   background-color: var(--theme);
+  color: var(--font-theme);
 }
+
 li{
   list-style: none;
 }
