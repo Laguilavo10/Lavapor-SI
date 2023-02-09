@@ -1,24 +1,15 @@
-import React, { useEffect, useState } from "react"
+import {  useState } from "react"
 import { useUser } from "../../context/userData"
+import { closeModal, openModal, useModal } from "../../hooks/useModal"
+import {  Modal } from "../Modal"
+import { useHandleTheme } from "../../hooks/useHandleTheme" 
 
 export function TopBar() {
+
   let { userData } = useUser()
-  const [darkMode, setDarkMode] = useState(false)
-  const [fontTheme, setFontTheme] = useState("#313135")
+  const { isOpen, setIsOpen } = useModal()
 
-  const changeTheme = () => {
-    setDarkMode((prev) => !prev)
-  }
-
-  useEffect(() => {
-    if (darkMode) {
-      document.documentElement.style.setProperty("--theme", "#313135")
-      document.documentElement.style.setProperty("--font-theme", "#f9f7f8")
-    } else {
-      document.documentElement.style.setProperty("--font-theme", "#313135")
-      document.documentElement.style.setProperty("--theme", "#f9f7f8")
-    }
-  }, [darkMode])
+  const {darkMode, setDarkMode, changeTheme} = useHandleTheme()
 
   return (
     <section className="topbar-container">
@@ -56,6 +47,7 @@ export function TopBar() {
         />
         <p>{userData?.name}</p>
         <svg
+          onClick={()=>openModal(setIsOpen)}
           xmlns="http://www.w3.org/2000/svg"
           className="icon icon-tabler icon-tabler-dots-vertical"
           width="44"
@@ -72,6 +64,7 @@ export function TopBar() {
           <circle cx="12" cy="5" r="1" />
         </svg>
       </div>
+      {isOpen && <Modal close={(event)=>closeModal({event, setIsOpen})} />}
     </section>
   )
 }
