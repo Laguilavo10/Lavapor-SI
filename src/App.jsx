@@ -7,6 +7,7 @@ import MainLayout from "./pages/MainLayout"
 import "./styles/Login.css"
 import "./styles/MainLayout.css"
 import "./styles/Menu.css"
+import "./styles/TopBar.css"
 
 function App() {
   return (
