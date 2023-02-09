@@ -1,4 +1,4 @@
-import React, { Children, useEffect } from "react"
+import React, { Children, cloneElement, useEffect } from "react"
 import { Outlet, useNavigate } from "react-router-dom"
 import { Menu } from "../../components/Menu"
 import { useUser } from "../../context/userData"
@@ -14,12 +14,15 @@ export default function MainLayout({children}) {
     }
   }, [userData])
 
+  // let childrenClone = cloneElement(children, {className: 'section-container',})
   return (
     <>
       <main className="main-container">
         <Menu></Menu>
         <TopBar></TopBar>
-        {children}
+        <section className="section-container">
+          {children}
+        </section>
       </main>
     </>
   )

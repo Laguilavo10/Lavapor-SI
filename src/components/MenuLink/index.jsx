@@ -1,13 +1,20 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { useEffect, useState } from "react"
+import { NavLink, useLocation } from "react-router-dom"
 
-export function MenuLink({children, svg, to}) {
+export function MenuLink({ children, svg, to }) {
+  const location = useLocation()
+  const [isActive, setIsActive] = useState(false)
+
+  useEffect(() => {
+    setIsActive(location.pathname === to)
+  }, [location, to])
+
   return (
     <>
-      <li className="menu-link">
+      <NavLink className={`menu-link ${isActive ? "menu-onpage" : ""}`} to={to}>
         {svg}
-        <NavLink to={to}>{children}</NavLink>
-      </li>
+        {children}
+      </NavLink>
     </>
-  );
+  )
 }

@@ -12,7 +12,9 @@
   --theme: #1c1c1e;
   /* light theme */
   --theme: #f9f7f8; 
+  --theme: #c7d5f3; 
   --border-radius:6px;
+  --shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
 }
 
 body{
