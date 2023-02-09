@@ -29,9 +29,9 @@ export function Login() {
         (u) => u.id === data.user && u.password === data.password
       )
       setUserData(userIn)
-      navigate("/main")
-    } else {
       navigate("/")
+    } else {
+      navigate("/login")
     }
   }
 

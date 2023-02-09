@@ -13,8 +13,8 @@ function App() {
     <HashRouter>
       <UserProvider>
         <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/main" element={<MainLayout />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/" element={<MainLayout />} />
         </Routes>
       </UserProvider>
     </HashRouter>
