@@ -8,9 +8,13 @@
 
 :root{
   --blue-dark:#18345E;
+  --theme: #1c1c1e;
   --border-radius:6px;
 }
 
+body{
+  background-color: var(--theme);
+}
 li{
   list-style: none;
 }
