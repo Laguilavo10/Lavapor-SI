@@ -12,6 +12,7 @@ import "./styles/TopBar.css"
 import "./styles/Form.css"
 import "./styles/Busqueda.css"
 import "./styles/Modal.css"
+import "./styles/Tabla.css"
 
 function App() {
   return (

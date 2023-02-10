@@ -1,0 +1,26 @@
+.tabla-container{
+  margin: 20px 0;
+}
+
+.tabla-header{
+  display: grid;
+  /* grid-template-columns: repeat(5, 1fr); */
+  text-align: center;
+  color: grey;
+}
+
+.tabla-data{
+  display: grid;
+  /* grid-template-columns: repeat(5, 1fr); */
+  text-align: center;
+  align-items: center;
+  margin: 10px 0;
+  gap: 10px;
+}
+
+.tabla-data  > svg{
+  justify-self: center;
+  width: 30px;
+  height: 30px;
+  stroke: black;
+}
