@@ -2,6 +2,7 @@ import { HashRouter, Routes, Route } from "react-router-dom"
 import { UserProvider } from "./context/userData"
 import { Clientes } from "./pages/Clientes"
 import { Login } from "./pages/Login"
+import { ClienteData } from "./pages/ClienteData"
 import MainLayout from "./pages/MainLayout"
 
 //styles
@@ -15,9 +16,10 @@ import "./styles/Modal.css"
 import "./styles/Tabla.css"
 
 function App() {
-  return (
+return (
     <HashRouter>
       <UserProvider>
+      <h1></h1>
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route
@@ -33,6 +35,14 @@ function App() {
             element={
               <MainLayout>
                 <Clientes />
+              </MainLayout>
+            }
+          />
+          <Route
+            path="/cliente"
+            element={
+              <MainLayout>
+                <ClienteData/>
               </MainLayout>
             }
           />

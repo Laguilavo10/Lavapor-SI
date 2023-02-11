@@ -3,17 +3,19 @@ import { useNavigate } from "react-router-dom"
 import { Busqueda } from "../../components/Busqueda"
 import { RegistroForm } from "../../components/RegistroForm"
 import { Tabla } from "../../components/Tabla"
+import { InputsClientes } from "../../utils/data"
 
 export function Clientes() {
-
-  const Inputs = [
-    { name: "Cedula de ciudadanía" },
-    { name: "Nombre" },
-    { name: "Apellido" },
-    { name: "Direccion" },
-    { name: "Email" },
-    { name: "Telefono" },
-  ]
+  
+  const navigate = useNavigate()
+  // const Inputs = [
+  //   { name: "Cedula de ciudadanía" },
+  //   { name: "Nombre" },
+  //   { name: "Apellido" },
+  //   { name: "Direccion" },
+  //   { name: "Email" },
+  //   { name: "Telefono" },
+  // ]
 
   const headersTablaClientes = [
     "ID",
@@ -40,10 +42,14 @@ export function Clientes() {
 
   let dataInArray = dataTablaClientes.map((a) => Object.values(a))
 
+  const edithUser = (data)=>{
+    let ID = data[0]
+    navigate(`/cliente?usuario=${ID}`, {state: data})
+  } 
 
   return (
     <>
-      <RegistroForm countInputs={Inputs} />
+      <RegistroForm countInputs={InputsClientes } />
       <Busqueda />
       <Tabla headers={headersTablaClientes}>
         {/* Lo que hay aqui no se ni como lo hice, no tocar */}
@@ -53,6 +59,7 @@ export function Clientes() {
               <li key={index}>{itemData}</li>
             ))}
             <svg
+              onClick={()=>edithUser(dataUser)}
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="none"
