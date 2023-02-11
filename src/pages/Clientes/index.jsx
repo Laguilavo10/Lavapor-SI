@@ -27,13 +27,13 @@ export function Clientes() {
 
   const dataTablaClientes = [
     {
-      ID: 1034776329,
+      CC: 1034776329,
       Nombre: "Andres Laguilavo",
       Telefono: 3214613258,
       Direccion: "Madelena",
     },
     {
-      ID: 1234567,
+      CC: 1234567,
       Nombre: "Bibis Ruiz",
       Telefono: 987654321,
       Direccion: "Suba",
@@ -43,8 +43,8 @@ export function Clientes() {
   let dataInArray = dataTablaClientes.map((a) => Object.values(a))
 
   const edithUser = (data)=>{
-    let ID = data[0]
-    navigate(`/cliente?usuario=${ID}`, {state: data})
+    let infoUserInObject = dataTablaClientes.find((a)=>a['CC'] === data[0])
+    navigate(`/cliente?usuario=${infoUserInObject['CC']}`, {state: infoUserInObject})
   } 
 
   return (
