@@ -3,53 +3,27 @@ import { useNavigate } from "react-router-dom"
 import { Busqueda } from "../../components/Busqueda"
 import { RegistroForm } from "../../components/RegistroForm"
 import { Tabla } from "../../components/Tabla"
-import { InputsClientes } from "../../utils/data"
+import {
+  dataTablaClientes,
+  headersTablaClientes,
+  InputsClientes,
+} from "../../utils/data"
 
 export function Clientes() {
-  
   const navigate = useNavigate()
-  // const Inputs = [
-  //   { name: "Cedula de ciudadanía" },
-  //   { name: "Nombre" },
-  //   { name: "Apellido" },
-  //   { name: "Direccion" },
-  //   { name: "Email" },
-  //   { name: "Telefono" },
-  // ]
-
-  const headersTablaClientes = [
-    "ID",
-    "Nombre",
-    "Telefono",
-    "Direccion",
-    "Editar",
-  ]
-
-  const dataTablaClientes = [
-    {
-      CC: 1034776329,
-      Nombre: "Andres Laguilavo",
-      Telefono: 3214613258,
-      Direccion: "Madelena",
-    },
-    {
-      CC: 1234567,
-      Nombre: "Bibis Ruiz",
-      Telefono: 987654321,
-      Direccion: "Suba",
-    },
-  ]
 
   let dataInArray = dataTablaClientes.map((a) => Object.values(a))
 
-  const edithUser = (data)=>{
-    let infoUserInObject = dataTablaClientes.find((a)=>a['CC'] === data[0])
-    navigate(`/cliente?usuario=${infoUserInObject['CC']}`, {state: infoUserInObject})
-  } 
+  const redirectMoreInfoUser = (data) => {
+    let infoUserInObject = dataTablaClientes.find((a) => a["CC"] === data[0])
+    navigate(`/cliente?usuario=${infoUserInObject["CC"]}`, {
+      state: infoUserInObject,
+    })
+  }
 
   return (
     <>
-      <RegistroForm countInputs={InputsClientes } />
+      <RegistroForm countInputs={InputsClientes} />
       <Busqueda />
       <Tabla headers={headersTablaClientes}>
         {/* Lo que hay aqui no se ni como lo hice, no tocar */}
@@ -59,7 +33,7 @@ export function Clientes() {
               <li key={index}>{itemData}</li>
             ))}
             <svg
-              onClick={()=>edithUser(dataUser)}
+              onClick={() => redirectMoreInfoUser(dataUser)}
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="none"

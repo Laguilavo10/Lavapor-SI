@@ -11,7 +11,7 @@ export function InputForm({ name, type = "text", valueInput, isDisabled = false 
       <label className="label-form">
         {name}
         {value ? (
-          <input type={type} className="input-form" value={value} disabled={isDisabled} onChange={handleValueInput}/>
+          <input type={type} className="input-form" value={value} disabled={isDisabled} onChange={handleValueInput} name={name}/>
         ) : (
           <input type={type} className="input-form" disabled={isDisabled}/>
         )}
