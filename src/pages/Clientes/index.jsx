@@ -9,6 +9,8 @@ import {
   InputsClientes,
 } from "../../utils/data"
 
+
+
 export function Clientes() {
   const navigate = useNavigate()
 

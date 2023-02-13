@@ -1,6 +1,6 @@
 import React from "react"
-import { linksNav } from "../../utils/linksNav"
-import { MenuLink } from "../MenuLink"
+import { linksNav } from "../../routes/linksNav"
+import { MenuItem } from "../MenuItem"
 
 export function Menu() {
 
@@ -10,9 +10,9 @@ export function Menu() {
       <menu className="menu-container">
         <h4>MENU</h4>
         {linksNav.map((link) => (
-          <MenuLink svg={link.svg} key={link.title} to={link.to}>
+          <MenuItem svg={link.svg} key={link.title} to={link.to}>
             {link.title}
-          </MenuLink>
+          </MenuItem>
         ))}
       </menu>
     </aside>

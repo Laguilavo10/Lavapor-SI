@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { NavLink, useLocation } from "react-router-dom"
 
-export function MenuLink({ children, svg, to }) {
+export function MenuItem({ children, svg, to }) {
   const location = useLocation()
   const [isActive, setIsActive] = useState(false)
 
