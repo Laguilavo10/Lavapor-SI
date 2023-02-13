@@ -1,8 +1,8 @@
 import React from "react"
 
-export function Tabla({ headers, children }) {
+export function Tabla({ headers, children, className }) {
   return (
-    <article className="tabla-container">
+    <article className={`tabla-container ${className}`}>
       <ul
         className="tabla-header"
         style={{ gridTemplateColumns: `repeat(${headers.length}, 1fr)` }}

@@ -3,13 +3,8 @@ import { useNavigate } from "react-router-dom"
 import { Busqueda } from "../../components/Busqueda"
 import { RegistroForm } from "../../components/RegistroForm"
 import { Tabla } from "../../components/Tabla"
-import {
-  dataTablaClientes,
-  headersTablaClientes,
-  InputsClientes,
-} from "../../utils/data"
-
-
+import { dataTablaClientes, InputsClientes } from "../../utils/data"
+import { headersTablaClientes } from "../../utils/headersTablas"
 
 export function Clientes() {
   const navigate = useNavigate()

@@ -68,8 +68,8 @@ export const linksNav = [
     ),
   },
   {
-    title: "Ventas",
-    to: "/ventas",
+    title: "Venta",
+    to: "/venta",
     svg: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
