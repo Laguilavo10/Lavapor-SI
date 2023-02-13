@@ -1,0 +1,75 @@
+.cliente-inputs, .vendedor-inputs{
+  display: flex;
+  gap: 20px;
+  align-items: end;
+}
+
+.cliente-inputs>p, .vendedor-inputs>p{
+  font-size: 1.5rem;
+}
+
+.form-venta{
+  grid-template-areas: 
+    "cliente vendedor"
+    "vacio btnHandleItem"
+    "tabla tabla"
+    "abono total"
+    "vacio2 generar";
+}
+
+.tabla-venta{
+  grid-area: tabla;
+}
+
+.handle-item--container{
+  grid-area: btnHandleItem;
+}
+
+.more{
+  grid-area: more;
+}
+
+.handle-item--container{
+  display: flex;
+  gap: 20px;
+  justify-content: end;
+  align-items: center;
+}
+.btn-add--item, .btn-delete--item{
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.btn-add--item{
+  background-color: #4CAF50;
+}
+
+.btn-delete--item{
+  background-color: #F44336;
+}
+
+.venta-abono--container > label > input{
+  width: 50%;
+}
+.total-venta{
+  grid-area: total;
+  display: flex;
+  justify-content: end;
+  padding: 0px 20px;
+  gap: 10px;
+  align-items: center;
+}
+
+.total-venta > p{
+  font-size: 1.3rem;
+}
+
+.total-venta > p:nth-child(2){
+  font-size: 2rem;
+  display: inline-block;
+  vertical-align: bottom;
+}

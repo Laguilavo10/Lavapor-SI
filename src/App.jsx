@@ -9,11 +9,16 @@ import "./styles/Form.css"
 import "./styles/Busqueda.css"
 import "./styles/Modal.css"
 import "./styles/Tabla.css"
+import "./styles/Inventario.css"
+import "./styles/Venta.css"
+
 //components
 import MainLayout from "./pages/MainLayout"
 import { Login } from "./pages/Login"
 import { Clientes } from "./pages/Clientes"
 import { ClienteData } from "./pages/ClienteData"
+import { Inventario } from "./pages/Inventario"
+import { Venta } from "./pages/Venta"
 import { Precios } from "./pages/Precios"
 
 
@@ -49,34 +54,26 @@ return (
             }
           />
           <Route
-            path="/inventario"
-            element={
-              <MainLayout>
-                <h1>inventario</h1>
-              </MainLayout>
-            }
-          />
-          <Route
-            path="/ventas"
-            element={
-              <MainLayout>
-                <h1>ventas</h1>
-              </MainLayout>
-            }
-          />
-          <Route
             path="/facturas"
             element={
               <MainLayout>
-                <h1>facturas</h1>
+                <h1>hola mundo</h1>
               </MainLayout>
             }
           />
           <Route
-            path="/gastos"
+            path="/venta"
             element={
               <MainLayout>
-                <h1>gastos</h1>
+                <Venta/>
+              </MainLayout>
+            }
+          />
+          <Route
+            path="/inventario"
+            element={
+              <MainLayout>
+                <Inventario/>
               </MainLayout>
             }
           />

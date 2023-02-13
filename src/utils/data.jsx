@@ -7,14 +7,6 @@ export const InputsClientes = [
   { name: "Telefono" },
 ]
 
-export const headersTablaClientes = [
-  "ID",
-  "Nombre",
-  "Telefono",
-  "Direccion",
-  "Editar",
-]
-
 export const dataTablaClientes = [
   {
     CC: 1034776329,
