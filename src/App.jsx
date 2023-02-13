@@ -1,10 +1,5 @@
 import { HashRouter, Routes, Route } from "react-router-dom"
 import { UserProvider } from "./context/userData"
-import { Clientes } from "./pages/Clientes"
-import { Login } from "./pages/Login"
-import { ClienteData } from "./pages/ClienteData"
-import MainLayout from "./pages/MainLayout"
-
 //styles
 import "./styles/Login.css"
 import "./styles/MainLayout.css"
@@ -14,6 +9,13 @@ import "./styles/Form.css"
 import "./styles/Busqueda.css"
 import "./styles/Modal.css"
 import "./styles/Tabla.css"
+//components
+import MainLayout from "./pages/MainLayout"
+import { Login } from "./pages/Login"
+import { Clientes } from "./pages/Clientes"
+import { ClienteData } from "./pages/ClienteData"
+import { Precios } from "./pages/Precios"
+
 
 function App() {
 return (
@@ -75,6 +77,14 @@ return (
             element={
               <MainLayout>
                 <h1>gastos</h1>
+              </MainLayout>
+            }
+          />
+          <Route
+            path="/precios"
+            element={
+              <MainLayout>
+                <Precios/>
               </MainLayout>
             }
           />
