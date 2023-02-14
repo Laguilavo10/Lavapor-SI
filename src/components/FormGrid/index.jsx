@@ -1,9 +1,14 @@
 import { useState } from "react"
 
-export function FormGrid({children, className, submitFunction, referencia }) {
+export function FormGrid({children, gridColumns, className, submitFunction, referencia }) {
+
+  let styles = {
+    gridTemplateColumns: `repeat(${gridColumns}, 1fr)`,
+  };
+
   return (
     <>
-      <form action="" className={`form ${className || ''}`} onSubmit={submitFunction} ref={referencia || null}>
+      <form style={styles} className={`form ${className || ''}`} onSubmit={submitFunction} ref={referencia || null}>
         {children}
       </form>
     </>

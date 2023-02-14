@@ -5,11 +5,13 @@ import "./styles/Login.css"
 import "./styles/MainLayout.css"
 import "./styles/Menu.css"
 import "./styles/TopBar.css"
+import "./styles/Clientes.css"
+
 import "./styles/Form.css"
 import "./styles/Busqueda.css"
 import "./styles/Modal.css"
 import "./styles/Tabla.css"
-import "./styles/Inventario.css"
+// import "./styles/Inventario.css"
 import "./styles/Venta.css"
 
 //components
@@ -17,7 +19,7 @@ import MainLayout from "./pages/MainLayout"
 import { Login } from "./pages/Login"
 import { Clientes } from "./pages/Clientes"
 import { ClienteData } from "./pages/ClienteData"
-import { Inventario } from "./pages/Inventario"
+// import { Inventario } from "./pages/Inventario"
 import { Venta } from "./pages/Venta"
 import { Precios } from "./pages/Precios"
 
@@ -66,14 +68,6 @@ return (
             element={
               <MainLayout>
                 <Venta/>
-              </MainLayout>
-            }
-          />
-          <Route
-            path="/inventario"
-            element={
-              <MainLayout>
-                <Inventario/>
               </MainLayout>
             }
           />
