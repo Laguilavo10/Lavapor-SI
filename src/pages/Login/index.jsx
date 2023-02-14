@@ -40,7 +40,7 @@ export function Login() {
       <main className="login-container">
         <aside className="login-aside"></aside>
         <section className="login-form">
-          <h1>Login Administrator</h1>
+          <h2>Login Administrator</h2>
           <form onSubmit={validateUser} ref={FormUser}>
             <label className="login-form--label">
               Usuario

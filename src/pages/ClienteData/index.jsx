@@ -46,7 +46,7 @@ export function ClienteData() {
   return (
     <>
       <GoBack></GoBack>
-      <h1>{Nombre}</h1>
+      <h2>{Nombre}</h2>
       <h4>{CC}</h4>
       <FormGrid gridColumns={2} referencia={dataClientReference}>
         {[...inputsWithValues]}

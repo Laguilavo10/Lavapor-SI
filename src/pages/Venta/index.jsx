@@ -23,7 +23,7 @@ export function Venta() {
 
   return (
     <>
-      <h1>Registrar Venta</h1>
+      <h2>Registrar Venta</h2>
       <p>13/02/2023</p>
       <FormGrid className="form-venta">
         <div className="cliente-inputs">

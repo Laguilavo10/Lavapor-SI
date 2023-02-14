@@ -3,7 +3,7 @@ import React from "react"
 export function Busqueda() {
   return (
     <>
-      <h1>Busqueda</h1>
+      <h2>Busqueda</h2>
       <section className="search-section">
         <form className="search-container">
           <svg

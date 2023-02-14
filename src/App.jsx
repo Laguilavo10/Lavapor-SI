@@ -28,14 +28,14 @@ function App() {
 return (
     <HashRouter>
       <UserProvider>
-      <h1></h1>
+      <h2></h2>
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route
             path="/"
             element={
               <MainLayout>
-                <h1>hola mundo</h1>
+                <h2>hola mundo</h2>
               </MainLayout>
             }
           />
@@ -59,7 +59,7 @@ return (
             path="/facturas"
             element={
               <MainLayout>
-                <h1>hola mundo</h1>
+                <h2>hola mundo</h2>
               </MainLayout>
             }
           />
@@ -83,7 +83,7 @@ return (
             path="*"
             element={
               <MainLayout>
-                <h1>Not Found</h1>
+                <h2>Not Found</h2>
               </MainLayout>
             }
           />

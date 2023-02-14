@@ -5,7 +5,7 @@ import { FormGrid } from "../FormGrid"
 export function RegistroForm({countInputs}) {
   return (
     <>
-      <h1>Registro</h1>
+      <h2>Registro</h2>
       <FormGrid gridColumns={3}>
         {countInputs.map((i) => (
           <InputForm name={i.name} key={i.name} />
