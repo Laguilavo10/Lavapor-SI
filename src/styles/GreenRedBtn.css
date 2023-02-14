@@ -1,0 +1,22 @@
+.btns-container{
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-green, .btn-red{
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-green{
+  background-color: #4CAF50;
+}
+
+.btn-red{
+  background-color: #F44336;
+}

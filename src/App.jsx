@@ -11,7 +11,7 @@ import "./styles/Form.css"
 import "./styles/Busqueda.css"
 import "./styles/Modal.css"
 import "./styles/Tabla.css"
-// import "./styles/Inventario.css"
+import "./styles/GreenRedBtn.css"
 import "./styles/Venta.css"
 
 //components
