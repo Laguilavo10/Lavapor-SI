@@ -1,10 +1,11 @@
 import React from "react"
 import { useNavigate } from "react-router-dom"
 import { Busqueda } from "../../components/Busqueda"
-import { RegistroForm } from "../../components/RegistroForm"
+import { RegistroClientes } from "../../containers/RegistroClientes"
 import { Tabla } from "../../components/Tabla"
 import { dataTablaClientes, InputsClientes } from "../../utils/data"
 import { headersTablaClientes } from "../../utils/headersTablas"
+import { SVG } from "../../svg/collectionSVG"
 
 export function Clientes() {
   const navigate = useNavigate()
@@ -20,7 +21,7 @@ export function Clientes() {
 
   return (
     <>
-      <RegistroForm countInputs={InputsClientes} />
+      <RegistroClientes countInputs={InputsClientes} />
       <Busqueda />
       <Tabla headers={headersTablaClientes}>
         {/* Lo que hay aqui no se ni como lo hice, no tocar */}
@@ -29,17 +30,9 @@ export function Clientes() {
             {dataUser.map((itemData, index) => (
               <li key={index}>{itemData}</li>
             ))}
-            <svg
-              onClick={() => redirectMoreInfoUser(dataUser)}
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-            >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M9 7h-3a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-3" />
-              <path d="M9 15h3l8.5 -8.5a1.5 1.5 0 0 0 -3 -3l-8.5 8.5v3" />
-              <line x1="16" y1="5" x2="19" y2="8" />
-            </svg>
+            <li onClick={() => redirectMoreInfoUser(dataUser)}>
+              {SVG["edit"]}
+            </li>
           </React.Fragment>
         ))}
       </Tabla>

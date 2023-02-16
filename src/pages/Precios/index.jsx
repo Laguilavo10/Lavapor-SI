@@ -23,7 +23,7 @@ export function Precios() {
       >
         <InputForm name={"Descripcion"} />
         <InputForm name={"Precio"} type={"number"} />
-        <button className="form-button">Crear</button>
+        <button className="button-submit">Crear</button>
       </FormGrid>
       <h2>Precios</h2>
       <Tabla headers={headersTablaPrecios}>

@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export function InputForm({ name, type = "text", valueInput, isDisabled = false }) {
+export function InputForm({ name, type = "text", valueInput = '', isDisabled = false }) {
   const [value, setValue] = useState(valueInput);
   
   const handleValueInput = (e)=>{
