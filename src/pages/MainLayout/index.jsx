@@ -1,8 +1,8 @@
 import React, { Children, cloneElement, useEffect } from "react"
 import { Outlet, useNavigate } from "react-router-dom"
-import { Menu } from "../../components/Menu"
+import { Menu } from "../../containers/Menu"
 import { useUser } from "../../context/userData"
-import { TopBar } from "../../components/TopBar"
+import { TopBar } from "../../containers/TopBar"
 
 export default function MainLayout({children}) {
   let { userData } = useUser()

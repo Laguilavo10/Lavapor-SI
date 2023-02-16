@@ -1,6 +1,6 @@
 import React from "react"
 import { linksNav } from "../../routes/linksNav"
-import { MenuItem } from "../MenuItem"
+import { MenuItem } from "../../components/MenuItem"
 import logo from '../../assets/Logo.png'
 
 export function Menu() {

@@ -1,7 +1,7 @@
 import {  useState } from "react"
 import { useUser } from "../../context/userData"
 import { closeModal, openModal, useModal } from "../../hooks/useModal"
-import {  Modal } from "../Modal"
+import {  Modal } from "../../components/Modal"
 import { useHandleTheme } from "../../hooks/useHandleTheme" 
 
 export function TopBar() {
