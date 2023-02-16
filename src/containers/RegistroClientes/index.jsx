@@ -1,8 +1,8 @@
 import React from "react"
 import { InputForm } from "../../components/InputForm"
-import { FormGrid } from "../FormGrid"
+import { FormGrid } from "../../components/FormGrid"
 
-export function RegistroForm({countInputs}) {
+export function RegistroClientes({countInputs}) {
   return (
     <>
       <h2>Registro</h2>
@@ -10,7 +10,7 @@ export function RegistroForm({countInputs}) {
         {countInputs.map((i) => (
           <InputForm name={i.name} key={i.name} />
         ))}
-        <button className="form-button">Registrar</button>
+        <button className="button-submit btn-registro--clientes">Registrar</button>
       </FormGrid>
     </>
   )
