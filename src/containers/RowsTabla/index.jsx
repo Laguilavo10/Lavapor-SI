@@ -14,11 +14,15 @@ export function RowsTabla({item}) {
         {item.descripcion}
       </AvailableToEdit>
       <AvailableToEdit availableToEdit={canEdit}>{item.precio}</AvailableToEdit>
+      <li>
+
       <GreenRedButtons
         red={"Eliminar"}
         green={canEdit ? "Guardar" :"Editar"}
         actionGreenBtn={canEditFunction}
       />
+
+      </li>
     </>
   )
 }

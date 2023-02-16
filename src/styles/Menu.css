@@ -6,7 +6,7 @@
   flex-direction: column;
   gap: 30px;
   position: fixed;
-  grid-area: menu;
+  width: 250px;
 }
 
 .asidebar-container > img{
