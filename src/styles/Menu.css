@@ -4,11 +4,15 @@
   padding: 26px;
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 30px;
   position: fixed;
   grid-area: menu;
 }
 
+.asidebar-container > img{
+  align-self: center;
+  width: 100px;
+}
 .menu-container{
   display: flex;
   flex-direction: column;

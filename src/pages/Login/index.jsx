@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { useUser } from "../../context/userData"
 import { users } from "../../utils/users"
+import logo from '../../assets/Logo.png'
 
 export function Login() {
   const [viewPassword, setViewPassword] = useState(false)
@@ -40,6 +41,7 @@ export function Login() {
       <main className="login-container">
         <aside className="login-aside"></aside>
         <section className="login-form">
+          <img src={logo} alt="logo-lavapor"  />
           <h2>Login Administrator</h2>
           <form onSubmit={validateUser} ref={FormUser}>
             <label className="login-form--label">

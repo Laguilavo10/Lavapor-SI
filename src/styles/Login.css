@@ -17,6 +17,10 @@
   gap: 30px;
 }
 
+.login-form > img{
+  width: 100px;
+}
+
 .login-form > h2{
   font-size: 40px;
 }
