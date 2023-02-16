@@ -1,10 +1,10 @@
-import React from "react"
+import React, { useState } from "react"
 import { AvailableToEdit } from "../../components/AvailableToEdit"
 import { FormGrid } from "../../components/FormGrid"
 import { InputForm } from "../../components/InputForm"
 import { Tabla } from "../../components/Tabla"
-import { GreenRedButtons } from "../../components/GreenRedButtons"
 import { headersTablaPrecios } from "../../utils/headersTablas"
+import { RowsTabla } from "../../containers/RowsTabla"
 
 export function Precios() {
   const dataPrecios = [
@@ -17,19 +17,18 @@ export function Precios() {
   return (
     <>
       <h2>Nuevo</h2>
-      <FormGrid gridColumns={3}>
+      <FormGrid
+        gridColumns={3}
+        customStyles={{ gridTemplateColumns: "37% 37% 20%" }}
+      >
         <InputForm name={"Descripcion"} />
         <InputForm name={"Precio"} type={"number"} />
-        <button>Crear</button>
+        <button className="form-button">Crear</button>
       </FormGrid>
       <h2>Precios</h2>
       <Tabla headers={headersTablaPrecios}>
         {dataPrecios.map((item) => (
-          <React.Fragment>
-            <AvailableToEdit>{item.descripcion}</AvailableToEdit>
-            <AvailableToEdit>{item.precio}</AvailableToEdit>
-            <GreenRedButtons red={'eliminar'} green={'editar'}/>
-          </React.Fragment>
+          <RowsTabla item={item} />
         ))}
       </Tabla>
     </>

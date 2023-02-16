@@ -4,7 +4,7 @@ import { InputForm } from "../InputForm"
 export function AvailableToEdit({ children, availableToEdit = false }) {
   return (
     <>
-      {!availableToEdit ? <p>{children}</p> : <InputForm name={children}/>}
+      {!availableToEdit ? <p>{children}</p> : <InputForm valueInput={children} />}
     </>
   )
 }

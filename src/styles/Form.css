@@ -18,10 +18,13 @@
   border: 1px solid grey;
   padding: 5px;
 }
+
 .form-button{
-  height: 40px;
+  height: 35px;
+  padding: 5px;
   border: none;
   box-shadow: var(--shadow);
   border-radius: var(--border-radius);
   background-color: var(--yellow-button);
+  align-self: end;
 }

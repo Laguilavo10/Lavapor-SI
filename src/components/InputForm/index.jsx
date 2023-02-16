@@ -13,7 +13,7 @@ export function InputForm({ name, type = "text", valueInput, isDisabled = false 
         {value ? (
           <input type={type} className="input-form" value={value} disabled={isDisabled} onChange={handleValueInput} name={name}/>
         ) : (
-          <input type={type} className="input-form" disabled={isDisabled}/>
+          <input type={type} className="input-form" disabled={isDisabled} value={value} onChange={handleValueInput}/>
         )}
       </label>
     </>
