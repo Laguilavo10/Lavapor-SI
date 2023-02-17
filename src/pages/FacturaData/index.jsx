@@ -1,5 +1,7 @@
 import { useState } from "react"
 import { GoBack } from "../../components/GoBack"
+import { Tabla } from "../../components/Tabla"
+import { headersTablaVenta } from "../../utils/headersTablas"
 
 export function FacturaData({ data }) {
   let { id, valor, estado, cliente, fecha } = data
@@ -9,21 +11,9 @@ export function FacturaData({ data }) {
       <h2>Factura #{id}</h2>
       <p>Cliente: {cliente}</p>
 
-      
-
-      {/* <div className="factura">
-        <div className="factura-encabezado">
-          <div className="factura-titulo">Factura #{id}</div>
-          <div className="factura-fecha">{fecha}</div>
-        </div>
-        <div className="factura-detalles">
-          <div className="factura-cliente">{cliente}</div>
-          <div className="factura-valor">${valor}</div>
-          <div className={`factura-estado ${estado.toLowerCase()}`}>
-            {estado}
-          </div>
-        </div>
-      </div> */}
+      <Tabla headers={headersTablaVenta} className={"tabla-venta"}>
+      <h1>dasd</h1>
+      </Tabla>
       
     </>
   )

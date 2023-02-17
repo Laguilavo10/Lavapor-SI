@@ -10,7 +10,7 @@ export function RowsTabla({ item }) {
   }
   return (
     <>
-      <AvailableToEdit availableToEdit={canEdit}>{item.id}</AvailableToEdit>
+      <li>{item.id}</li>
       <AvailableToEdit availableToEdit={canEdit}>{item.descripcion}</AvailableToEdit>
       <AvailableToEdit availableToEdit={canEdit}>{item.precio}</AvailableToEdit>
       <li>

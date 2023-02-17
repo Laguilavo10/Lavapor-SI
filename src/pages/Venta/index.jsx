@@ -9,19 +9,22 @@ import { headersTablaVenta } from "../../utils/headersTablas"
 export function Venta() {
   const inputsItemVenta = [
     <InputForm type="number" />,
-    <p>prueba</p>,
+    <p></p>,
     <InputForm type="number" valueInput="1" />,
-    <p>prueba</p>,
-    <p>1000</p>,
+    <p></p>,
+    <p></p>,
   ]
 
   const [countRows, setCountRows] = useState(inputsItemVenta)
 
-  const addItemRow = () => {
+  const addItemRow = (event) => {
+    event.preventDefault()
+
     setCountRows((prev) => [...prev, ...inputsItemVenta])
   }
 
-  const deleteItemRow = () => {
+  const deleteItemRow = (event) => {
+    event.preventDefault()
     if (countRows.length <= 5) return
     //elimina los ultimos 4 elementos
     countRows.splice(-0, 5)
@@ -29,30 +32,36 @@ export function Venta() {
     setCountRows(newRows)
   }
 
+  const [abono, setAbono] = useState(false)
 
-  const [abono, setAbono] = useState(false);
-
-  const handleAbono = ()=>{
-    setAbono(prev=>!prev)
+  const handleAbono = () => {
+    setAbono((prev) => !prev)
   }
-  
+
+  let fecha = new Date()
+  const opciones = { day: "numeric", month: "short", year: "numeric" }
+  let fechaFormateada = fecha.toLocaleDateString("en-US", opciones)
+
+  const registrarVenta = ()=>{
+    e.preventDefault()
+  }
+
+
   return (
     <>
       <h2>Registrar Venta</h2>
-      <p>13/02/2023</p>
-      <FormGrid className="form-venta">
+      <p className="venta-fecha">{fechaFormateada}</p>
+      <FormGrid className="form-venta" onSubmit={registrarVenta}>
         <div className="cliente-inputs">
           <InputForm name={"Cedula Cliente"} type={"number"} />
-          <p>Andres Felipe</p>
-          {/* <InputForm isDisabled={true} valueInput={"Andres Felipe"} /> */}
+          <p></p>
         </div>
         <div className="vendedor-inputs">
           <InputForm name={"Cedula Vendedor"} type={"number"} />
-          <p>Andres Felipe</p>
-          {/* <InputForm isDisabled={true} valueInput={"Bibis rumo"} /> */}
+          <p></p>
         </div>
-
         <h2>Prendas</h2>
+        
         <div className="handle-item--container">
           <GreenRedButtons
             green={"Agregar Item"}
@@ -66,7 +75,7 @@ export function Venta() {
           {...countRows}
         </Tabla>
 
-        <div className="venta-observaciones">
+        {/* <div className="venta-observaciones">
           <h3>Observaciones</h3>
           <textarea
             name=""
@@ -85,7 +94,7 @@ export function Venta() {
             <p>Total:</p>
             <p>$1000</p>
           </div>
-        </div>
+        </div> */}
         <button className="btn-registro-venta">Registrar Venta</button>
       </FormGrid>
     </>
