@@ -17,6 +17,7 @@
   box-shadow: var(--shadow);
   border: 1px solid grey;
   padding: 5px;
+  text-align: center;
 }
 
 .button-submit{

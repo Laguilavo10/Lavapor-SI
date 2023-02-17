@@ -8,11 +8,11 @@ import { RowsTabla } from "../../containers/RowsTabla"
 
 export function Precios() {
   const dataPrecios = [
-    { descripcion: "camisa", precio: "2000" },
-    { descripcion: "camisa", precio: "2000" },
-    { descripcion: "camisa", precio: "2000" },
-    { descripcion: "camisa", precio: "2000" },
-    { descripcion: "camisa", precio: "2000" },
+    { id:1, descripcion: "camisa", precio: "2000" },
+    { id:1, descripcion: "camisa", precio: "2000" },
+    { id:1, descripcion: "camisa", precio: "2000" },
+    { id:1, descripcion: "camisa", precio: "2000" },
+    { id:1, descripcion: "camisa", precio: "2000" },
   ]
   return (
     <>

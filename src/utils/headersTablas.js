@@ -7,6 +7,7 @@ export const headersTablaClientes = [
 ]
 
 export const headersTablaPrecios = [
+  'ID',
   'Descripcion',
   'Precio',
   'Editar'
@@ -16,6 +17,7 @@ export const headersTablaVenta = [
   'ID',
   'Descripcion',
   'Cantidad',
-  'Valor Unitario',
+  'Unitario',
+  'Valor'
 ]
 
