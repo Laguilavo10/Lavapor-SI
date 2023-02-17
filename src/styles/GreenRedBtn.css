@@ -14,9 +14,9 @@
 }
 
 .btn-green{
-  background-color: #4CAF50;
+  background-color: var(--green);
 }
 
 .btn-red{
-  background-color: #F44336;
+  background-color: var(--red);
 }

@@ -10,10 +10,10 @@ export function useHandleTheme() {
   useEffect(() => {
     if (darkMode) {
       document.documentElement.style.setProperty("--theme", "#313135")
-      document.documentElement.style.setProperty("--font-theme", "#f9f7f8")
+      document.documentElement.style.setProperty("--font-theme", "#f6f6f6")
     } else {
       document.documentElement.style.setProperty("--font-theme", "#313135")
-      document.documentElement.style.setProperty("--theme", "#f9f7f8")
+      document.documentElement.style.setProperty("--theme", "#f6f6f6")
     }
   }, [darkMode])
 

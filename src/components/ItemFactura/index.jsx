@@ -5,10 +5,11 @@ export function ItemFactura(){
     <>
       <article className='item-factura--container'>
         <span className='valor'>$50.0000</span>
-        <span className='fecha'>16 Feb</span>
         <p className='id-factura'>#12321</p>
-        <span className='estado'>Andres Laguilavo</span>
-        <div class="pendiente">Pendiente</div>
+        <span className='cliente'>Andres Laguilavo</span>
+        {/* <div class="pendiente">Pendiente</div> */}
+        <div class="entregado">Entregado</div>
+        <span className='fecha'>16 Feb</span>
       </article>
     </>
   )
