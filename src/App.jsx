@@ -6,13 +6,13 @@ import "./styles/MainLayout.css"
 import "./styles/Menu.css"
 import "./styles/TopBar.css"
 import "./styles/Clientes.css"
-
 import "./styles/Form.css"
 import "./styles/Busqueda.css"
 import "./styles/Modal.css"
 import "./styles/Tabla.css"
 import "./styles/GreenRedBtn.css"
 import "./styles/Venta.css"
+import "./styles/Factura.css"
 
 //components
 import MainLayout from "./pages/MainLayout"
@@ -22,6 +22,7 @@ import { ClienteData } from "./pages/ClienteData"
 // import { Inventario } from "./pages/Inventario"
 import { Venta } from "./pages/Venta"
 import { Precios } from "./pages/Precios"
+import { Facturas } from "./pages/Facturas"
 
 
 function App() {
@@ -59,7 +60,7 @@ return (
             path="/facturas"
             element={
               <MainLayout>
-                <h2>hola mundo</h2>
+                <Facturas/>
               </MainLayout>
             }
           />

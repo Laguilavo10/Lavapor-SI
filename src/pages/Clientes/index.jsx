@@ -22,6 +22,7 @@ export function Clientes() {
   return (
     <>
       <RegistroClientes countInputs={InputsClientes} />
+      <h2>Busqueda</h2>
       <Busqueda />
       <Tabla headers={headersTablaClientes}>
         {/* Lo que hay aqui no se ni como lo hice, no tocar */}
