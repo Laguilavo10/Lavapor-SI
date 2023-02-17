@@ -13,6 +13,7 @@ import "./styles/Tabla.css"
 import "./styles/GreenRedBtn.css"
 import "./styles/Venta.css"
 import "./styles/Factura.css"
+import "./styles/FacturaData.css"
 
 //components
 import MainLayout from "./pages/MainLayout"
